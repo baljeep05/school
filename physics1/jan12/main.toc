@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Review circuits}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Ohm's Law}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Kirchett's Law}{2}{}%
+\contentsline {section}{\numberline {2}Multiple resistors}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Paralell}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Series}{3}{}%
+\contentsline {section}{\numberline {3}Measuring devices}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Voltmeters}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Current meters}{3}{}%
+\contentsline {section}{\numberline {4}Multiple Batteries}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Series}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Paralell}{4}{}%

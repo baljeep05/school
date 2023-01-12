@@ -1,0 +1,136 @@
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{amsmath}
+
+\begin{document}
+	\tableofcontents	
+	\section{Review circuits}
+		A \emph{circuit} is a loop of \emph{conductive material}
+		
+		\begin{circuitikz}
+			\draw (0,0)
+			to[short] (0,1)
+			to[short] (1,1)
+			to[short] (1,0)
+			to[short] (0,0);
+		\end{circuitikz}
+		\\
+		An example of a very boring circuit
+		
+		\begin{circuitikz}
+			\draw (0,0)
+			to[battery1=U] (0,1) % The voltage source
+			to[short] (1,1)
+			to[short] (1,0)
+			to[short] (0,0);
+		\end{circuitikz}
+		\\
+		A slightly less boring circuit
+		
+		\begin{circuitikz}
+			\draw (0,0)
+			to[battery1=U] (0,2) % The voltage source
+			to[short] (1,2)
+			to[resistor] (1,0)
+			to[short] (0,0);
+		\end{circuitikz}
+		\\
+		A circuit with a battery and a resistor
+		
+		\begin{circuitikz}
+			\draw (0,0)
+			to[battery1=] (1,0); % The voltage source
+		\end{circuitikz}
+		\\
+		The longer leg of the battery is the negative pole, while the shorter one is the positive pole.
+		
+		\subsection{Ohm's Law}
+			\emph{Ohm's Law} states that $U = I \times R$ where $U$ is voltage, measured in volts ($V$), $I$ is current, measured in amps ($A$), and $R$ is resistance, measured in ohms ($\Omega$).
+		\newpage
+		\subsection{Kirchett's Law}
+			\emph{Kirchett's Law} states that, at a junction, currents before and after must equal.
+			
+			\begin{circuitikz}
+				\draw (0,0)
+				to[short=I] (1,0)
+				to[short] (1,0.5)
+				to[short=${I_{2}}$] (2,0.5)
+				to[short] (1,0.5)
+				to[short] (1,-0.5)
+				to[short=${I_{1}}$] (2,-0.5);
+			\end{circuitikz}
+			\\
+			In this case, $I = I_1 + I_2$
+	\section{Multiple resistors}
+		\subsection{Paralell}
+			In Paralell, the voltage is the same for all components, but current and resistance may change. In a circuit that looks like this, $\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}$ \\
+			\begin{circuitikz}
+			\draw (0,0)
+				to[battery1=$U$ $I$] (2,0) % The voltage source
+				to[short] (2,-3)
+				to[resistor=$R_1$ $I_2$] (0,-3)
+				to[open] (2,-1.5)
+				to[resistor=$R_2$ $I_2$] (0,-1.5)
+				to[open] (0,-3)
+				to[short] (0,0);
+			\end{circuitikz}
+			\\
+			The following is a proof of this:
+			\begin{center}
+			According to Ohm's Law,
+			\[U = I \times R \implies I = \frac{U}{R}\]  
+			\[U = I_1 \times R_1 \implies I_1 = \frac{U}{R_1}\] 
+			\[U = I_2 \times R_2 \implies I_2 = \frac{U}{R_2}\] 
+			According to Kirchoff's Law ($I = I_1 + I_2$)
+			\[\frac{U}{R} = \frac{U}{R_2} + \frac{U}{R_2}\]
+			\[\frac{1}{R} = \frac{1}{R_2} + \frac{1}{R_2}\]
+			\end{center}
+			This shows that adding a resistor in paralell increases $R^{-1}$, which means that $R$ gets smaller.
+		\subsection{Series}
+			In series, the current is the same for all components, but voltage and resistance may change. In a circuit that looks like this, $R = R_1 + R_2$. \\
+			\begin{circuitikz}
+			\draw (0,0)
+				to[battery1=U] (4,0) % The voltage source
+				to[short] (4,-1)
+				to[resistor=$R_1$] (2,-1)
+				to[resistor=$R_2$] (0,-1)
+				to[short] (0,0);
+			\end{circuitikz}
+			\\
+			The following is a proof of this, using Ohm's law.
+			\[U_1 = I \times R_1\]
+			\begin{center}
+			and
+			\end{center}
+			\[U_2 = I \times R_2\]
+			\begin{center}
+			and
+			\end{center}
+			\[U_1 + U_2 = U\]
+			\begin{center}
+			using Ohm's Law  we can now find the resistances by substituting $U$ for $I \times R$
+			\end{center}
+			\[I \times R = I \times R_1 + I \times R_2\]
+			\begin{center}
+			the currents cancel.
+			\end{center}
+			\[R = R_1 + R_2\]
+	\section{Measuring devices}
+		\subsection{Voltmeters}
+			 Components in paralell have the same voltage accross, thus voltage meters should be connected in paralell with the resistor.
+		\subsection{Current meters}
+			Components in series have the same current flowing through them, thus current meters should be connected in series with the resistor.
+	\section{Multiple Batteries}
+		\subsection{Series}
+			If there are batteries in series, the voltage adds and current remains the same.
+		\subsection{Paralell}
+			If the batteries are in paralell, the current adds and voltage remains the same. This means the batteries will last for longer, or be able to output more current.
+\end{document}
