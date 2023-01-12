@@ -5,6 +5,7 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{fancyhdr}
 \usepackage{parskip}
+\usepackage{multicol}
 
 \usepackage{tikz}
 \usepackage{chemfig}
@@ -33,14 +34,18 @@
 		\subsection{Alkanes}
 			The \emph{alkanes} are molecules made entirely of carbon and hydrogen joined by single covalent bonds. The \emph{-ane} suffix indicates an alkane. The general formula of an alkane is $C_n H_{2n+2}$
 			\subsubsection{List of Alkanes}
+			% C(-[:90]H)(-[:270]H) CH2 group
+				\setchemfig{atom sep=15pt}
+				\begin{multicols}{2}
 				\begin{enumerate}
-					\item{Methane}
-					\item{Ethane}
-					\item{Propane}
-					\item{Butane}
-					\item{Pentane}
-					\item{Hexane}
-					\item{Heptane}
-					\item{Octane}
+					\item{Methane, \chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)} }
+					\item{Ethane, \chemfig{C(-[:0]C(-[:0]H)(-[:90]H)(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)} }
+					\item{Propane, \chemfig{C(-[:0]C(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H))(-[:90]H)(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)} }
+					\item{Butane, \chemfig{C(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)} }
+					\item{Pentane \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H)))))} }
+					\item{Hexane, \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))))} }
+					\item{Heptane, \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)(-[:0]H)))))))))))))} }
+					\item{Octane, \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))))))))))))}}
 				\end{enumerate}
+				\end{multicols}	
 \end{document}
