@@ -11,12 +11,61 @@
 \usepackage{multicol}
 
 \usepackage{tikz}
-\usepackage[siunitx]{ciruitikz}
+\usepackage[siunitx]{circuitikz}
 \usepackage{chemfig}
 \usepackage{amsmath}
-\usepackage{mhchem}
-\setchemfig{atom sep=15pt
+\usepackage[version=4]{mhchem}
+\setchemfig{atom sep=15pt}
 
 \begin{document}
+	\tableofcontents
 
+	\section{Hydrocarbons}
+		\subsection{Properties of Hydrocarbons}
+			Melting and boiling point increase as the carbon chain gets longer. Melting and boiling points can only be compared between molecules in the same homologous series. \textbf{This is because different homologous series may have different intermolecular bonds than others}.	
+			
+		\subsection{Alkanes}
+			\subsubsection{Different Ways of Representing the Alkanes}
+				{\setchemfig{atom sep=12pt}
+				\begin{tabular}{|c|c|c|c|} \hline
+					Name & Molecular formula & Full Structural Formula & Condensed Formula \\ \hline
+					Methane & $\ce{CH4}$ & \chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)} & $\ce{CH4}$ \\ \hline
+					Ethane & $\ce{C2H6}$ & \chemfig{C(-[:0]C(-[:0]H)(-[:90]H)(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)} & $\ce{CH3CH3}$ \\ \hline
+					Propane & $\ce{C3H8}$ & \chemfig{C(-[:0]C(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H))(-[:90]H)(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)} & $\ce{CH3CH2CH3}$ \\ \hline
+					Butane & $\ce{C4H10}$ & \chemfig{C(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)} & $\ce{CH3CH2CH2CH3}$ \\ \hline
+					Pentane & $\ce{C5H12}$ & \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H)))))} & $\ce{CH3CH2CH2CH2CH3}$ \\ \hline
+					Hexane & $\ce{C6H14}$ & \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))))} & $\ce{CH3CH2CH2CH2CH2CH3}$ \\ \hline
+					Heptane & $\ce{C7H16}$ & \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)(-[:0]H)))))))))))))} & $\ce{CH3CH2CH2CH2CH2CH2CH3}$ \\ \hline
+					Octane & $\ce{C8H18}$ & \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)((-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))))))))))))} & $\ce{CH3CH2CH2CH2CH2CH2CH2CH3}$ \\ \hline
+				\end{tabular}
+				}
+				\subsubsection{Skeletal Formulae}
+					\begin{itemize}
+						\item{Propane \chemfig{-[1]-[-1]}}
+						\item{Butane \chemfig{-[1]-[-1]-[1]}}
+						\item{Pentane \chemfig{-[1]-[-1]-[1]-[-1]}}
+						\item{Hexane \chemfig{-[1]-[-1]-[1]-[-1]-[1]}}
+						\item{Heptane \chemfig{-[1]-[-1]-[1]-[-1]-[1]-[-1]}}
+						\item{Octane \chemfig{-[1]-[-1]-[1]-[-1]-[1]-[-1]-[1]}}
+					\end{itemize}
+				\subsubsection{Cyclic Carbon Chain}
+					Cyclopentane ($\ce{C5H10}$) \\ \\
+					{\scriptsize \chemfig{*5(-----)}} \\ \\
+					Alkanes can also occur as circular molecules. In this case their general formula is $\ce{CnH2n}$
+
+	\section{IUPAC Naming Conventions}
+		\subsection{The Rules}
+			\begin{enumerate}
+				\item{Find the longest continuous carbon chain. This will be the base of the name.}
+				\item{Check if there are any groups of atoms/atoms that are not part of the longest carbon chain. These groups are called \emph{substituent groups}.}
+				\item{Number the individual carbon atoms on the longest carbon chain so that the substituent groups are attached to the lowest number possible.}
+				\item{If there is more than one substituent group, they must be sorted in alphabetical order.}
+				\item{If there are two identical substituent groups, add the prefix \emph{di} for 2, \emph{tri} for 3, \emph{tetra} for 4, \emph{penta} for 5, and so on.}
+			\end{enumerate}
+		\subsection{Examples}
+			\begin{enumerate}
+				\item{Name this molecule: \\ \\ {\scriptsize \chemfig{C(-[:0]C(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H))(-[:90]\ce{CH2})(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)}} \\ \\ \emph{Answer:} 2methyl-propane, as there is a methyl group on the 2nd carbon of the propane.}
+				\item{Name this molecule: \\ \\ {\scriptsize \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90](-[:90]C(-[:90]C(-[:90]H)(-[:0]H)(-[:180]H))(-[:0]H)(-[:180]H)))(-[:270]H)(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H)))))}} \\ \\ \emph{Answer:} 2ethyl-pentane, as there is an ethyl group on the 2nd carbon of the pentane, from the right.}
+			\end{enumerate}
+			
 \end{document}
