@@ -1,0 +1,45 @@
+%No rights reserved under CC0 license.
+%See file LICENSE in git root for further details.
+
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+
+\begin{document}
+	\setchemfig{atom sep=25pt}
+	\tableofcontents
+	
+	\section{Halogenoalkanes}
+		A Halogenoalkane is an alkane with one or more halogens (group 17 elements) attached to it.
+		\\ \\
+		\chemfig{C(-[:0]C(-[:90]Cl)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)}
+		\\ \\
+		This is an example of a halogenalkane, 2-chloropentane.
+		
+		\subsection{Naming Halogenoalkanes}
+			The halogens are functional groups, but are treated as substituent groups in the case of naming. They follow the general formula of x-HalogenAlkane, where "x" is the carbon on which the halogen is located, "Halogen" is the abbreviation of the halogen used\footnote{Flouro for flourine, chloro for chlorine, bromo for bromine, and iodo for iodine.}, and "Alkane" is the name of the alkane with the same number of carbons. When adding more substituent groups to the molecule, they are organised in alphabetical order. Begin counting the carbons from the side that gives the first group (alphabetically) the lowest number.
+			
+	\section{Alcohols}
+		Alcohols have the functional group -OH (hydroxide).
+		\\ \\
+		\chemfig{C(-[:0]C(-[:0]H)(-[:90]H)(-[:270]H))(-[:90]OH)(-[:180]H)(-[:270]H)}
+		\\ \\
+		This is ethanol, the only alcohol humans can drink without (immediate) health hazard.
+		\subsection{Naming Alcohols}
+			The names of alcohols follow the following general formula: Alkan-x-ol, where "Alkan" is the name of the corresponding alkane, minus the "e", "x" is the carbon on which the -OH group is located, and "ol" is the suffix indicating that the compound is an alcohol.
+			\\ \\
+			\chemfig{C(-[:0]C(-[:90]OH)(-[:270]H)(-[:0]C(-[:90]CH3)(-[:270]H)(-[:0]C(-[:90]CH3)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)}
+			\\ \\
+			This is 1,2-methylbutan-3-ol, an example of a more complex alcohol.
+\end{document}
