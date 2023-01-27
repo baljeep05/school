@@ -1,0 +1,62 @@
+%No rights reserved under CC0 license.
+%See file LICENSE in git root for further details.
+
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+
+\begin{document}
+	\setchemfig{atom sep=20pt}
+	\tableofcontents
+	\section{Homologous Series of Aldehydes}
+		The functional group of the aldehyde is the \emph{carbonyl group}. It is named according to the formula Alkan\emph{al}. The functional group is always on the first carbon.
+		
+		\chemfig{(-[:0]C(=[:90]O)(-[:0]H))}
+		
+		The carbonyl group.
+		
+		\subsection{Examples of Aldehydes}
+			\begin{itemize}
+				\item{ Methanal \chemfig{H(-[:0]C(=[:90]O)(-[:0]H))}}
+				\item{ Ethanal \chemfig{CH3(-[:0]CH2(-[:0]C(=[:90]O)(-[:0]H)))}}
+			\end{itemize}
+			
+	\section{Homologous Series of Ketones}
+		The ketones are very similar to the aldehydes. Its functional group is also the carbonyl group, but this time without the hydrogen. It can therefore not be located on the first or last carbon.
+		
+		\chemfig{(-[:0]C(=[:90]O)(-[:0]))}
+		
+		The ketone carbonyl group.
+		
+		\subsection{Examples of Ketones}
+			\begin{itemize}
+				\item{Butan-2-one \chemfig{C(-[:0]C(=[:90]O)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)} }
+				\item{Hexan-3-one, \chemfig{C(-[:90]H)(-[:180]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(=[:90]O)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))))} }
+			\end{itemize}
+			
+	\section{Homologous Series of Ethers \emph{Not on test}}
+		Functional group:
+		
+		\chemfig{(-[:0]C(-[:0]O)(-[:0]C))}
+		
+		It breaks a carbon chain apart. They occur in carbohydrates.
+		
+		\subsection{Examples of Ethers}
+			\begin{itemize}
+				\item{ Methoxyethane \chemfig{CH3(-[:0]O(-[:0]CH2(-[:0]CH3)))} }
+			\end{itemize}
+			
+	\section{Homologous Series of Carboxylic Acids}
+		The carboxylic acids, also known as the \emph{organic acids}, have the 
+\end{document}

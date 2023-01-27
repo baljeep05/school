@@ -1,0 +1,107 @@
+%No rights reserved under CC0 license.
+%See file LICENSE in git root for further details.
+
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+
+\begin{document}
+	\setchemfig{atom sep=25pt}
+	\tableofcontents
+	\section{Primary, Secondary, and Tertiary Alcohols}
+		Alcohols can be divided into three categories depending on where the \emph{-OH} group is located.
+		\subsection{Primary Alcohols}
+			The primary alcohol has its \emph{-OH} group on a carbon that is only connected to \emph{one} other carbon. 
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]OH)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			Butan-1-ol, an example of a primary alcohol
+		\subsection{Secondary Alcohols}
+			The secondary alcohol has its \emph{-OH} group on a carbon that is connected to \emph{two} other carbons.
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]OH)(-[:270]H)(-[:0]C(-[:90]H)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			Butan-2-ol, an example of a secondary alcohol
+		\subsection{Tertiary Alcohols}
+			The tertiary alcohol has its \emph{-OH} group on a carbon that is connected to \emph{two} other carbons.
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]OH)(-[:270]CH_3)(-[:0]C(-[:90]H)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			2-methylbutan-2-ol, an example of a tertiary alcohol
+		\subsection{Oxidation of Alcohols}
+			When a \emph{primary alcohol} is oxidised, an aldehyde is formed.\footnote{In organic chemistry, oxidation is defined as loss/gain or hydrogen/oxygen, not loss/gain of electrons/protons} When a \emph{secondary alcohol} is oxidised, a ketone is formed. A \emph{tertiary alcohol} is unlikely to react in this way.
+
+	\section{Primary, Secondary, and Tertiary Halogenoalkanes}
+		Halogenoalkanes can be divided into three categories depending on where the halogen is located.
+		\subsection{Primary Halogenoalkanes}
+			The primary alcohol has its halogen on a carbon that is only connected to \emph{one} other carbon. 
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]Br)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			1-bromobutane, an example of a primary halogenoalkane
+		\subsection{Secondary Halogenoalkanes}
+			The secondary alcohol has its \emph{-OH} group on a carbon that is connected to \emph{two} other carbons.
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]Cl)(-[:270]H)(-[:0]C(-[:90]H)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			2-chlorobutane, an example of a secondary halogenoalkane
+		\subsection{Tertiary Halogenoalkanes}
+			The secondary alcohol has its \emph{-OH} group on a carbon that is connected to \emph{two} other carbons.
+			\\* \\*
+			\chemfig{C(-[:180]H)(-[:90]H)(-[:270]H)(-[:0]C(-[:90]Cl)(-[:270]CH_3)(-[:0]C(-[:90]H)(-[270]H)(-[:0]H)))}
+			\\* \\*
+			2-methyl-2-chlorobutane, an example of a secondary alcohol
+		\subsection{Reactions between Halogenoalkanes and Sodium Hydroxide}
+			When a \emph{primary halogenoalkane} reacts with NaOH, we expect a \emph{primary alcohol} and NaCl to be formed. When a \emph{secondary halogenoalkane} reacts with NaOH, we expect a \emph{secondary alcohol} and NaCl to be formed. When a \emph{tertiary alcohol} reacts with NaOH, we expect a \emph{tertiary alcohol} and NaCl to be formed.
+			
+	\section{Primary, Secondary, and Tertiary Amines}
+		Amines can be divided into three categories depending on where the nitrogen is located.
+		\subsection{Primary Amines}
+			The primary amine has its nitrogen connected to \emph{one} other carbon.
+			\\* \\*
+			\chemfig{X(-[:0]NH_2)}
+			\\* \\*
+			Where X is an alkyl group.
+		\subsection{Secondary Amines}
+			The secondary amine has its nitrogen connected to \emph{two} other carbons.
+			\\* \\*
+			\chemfig{X(-[:0]N(-[:90]H)(-[:0]X))}
+			\\* \\*
+			Where X is an alkyl group.
+		\subsection{Tertiary Amines}
+			The tertiary amine has its nitrogen connected to \emph{three} other carbons.
+			\\* \\*
+			\chemfig{X(-[:0]N(-[:90]X)(-[:0]X))}
+			\\* \\*
+			Where X is an alkyl group.
+			
+	\section{Isomerism}
+		\subsection{Structural}
+			Structural isomers have the \emph{same molecular formula but different structura formula.} The properties also differ between different isomers. For example, straight isomers have \emph{higher} boiling and melting points than their branched\footnote{With substituent groups attached} isomers, due to the straight isomers having \emph{higher london dispersion forces.} \newpage
+			\subsubsection{Examples}
+				\emph{Name all isomers of \ce{C4H10}}
+				\\* \\*
+				\chemfig{C(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]C(-[:90]H)(-[:270]H)(-[:0]H))))(-[:180]H)(-[:90]H)(-[:270]H)}			
+				\\* \\*	
+				n-butane (straight)
+				\\* \\*
+				\chemfig{C(-[:0]C(-[:0]C(-[:90]H)(-[:0]H)(-[:270]H))(-[:90]CH_3)(-[:270]H))(-[:90]H)(-[:180]H)(-[:270]H)}
+				\\* \\*
+				2-methylpropane
+		\subsection{Functional}
+			Functional isomers are a subtype of structural isomers. They have all the properties of structural isomers, as well as different functional groups.
+			Propanal and Propanone both have the formula \ce{C3H6O}, but different structual formulae and functional groups. They are therefore functional isomers. This is true for all aldehydes and ketones with the same alkane "base".
+			
+			The same applies to alcohols \& ethers and esters \& carboxylic acids.
+\end{document}
