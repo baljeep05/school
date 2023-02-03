@@ -1,0 +1,123 @@
+%No rights reserved under CC0 license.
+%See file LICENSE in git root for further details.
+
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+
+\begin{document}
+	\setchemfig{atom sep=15pt}
+	
+	In a reaction between organic molecules, it is \emph{only} the functional groups that participate in the reaction.
+	
+	\textbf{Example:}
+		\schemestart
+			\chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid} 
+			\+
+			\chemname{\chemfig{R’OH}}{Alcohol} 
+			\arrow{->} 
+			\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester} 
+			\+
+			\chemname{\chemfig{H_2O}}{Water} 
+		\schemestop
+	
+	In this reaction, the hydroxide from the alcohol and the hydrogen from the acid will react, forming water. This will leave the alkyl with a free radical from the alcohol to bond to the \ce{O2CR} from the carboxylic acid. This yields an ester. 
+	
+	\section{Reaction Mechanisms of Alkanes}
+		There are two ways in which an alkane can react, 
+		\begin{enumerate}
+			\item{Combustion}
+			\item{Free radical substitution}
+		\end{enumerate}
+		
+		\subsection{Combustion}
+			There are two types of alkane combustion, complete and incomplete. In combustion, all bonds are broken and then reformed.
+			\subsubsection{Complete Combustion}
+				Complete combustion requires excess air/oxygen.
+				
+				\ce{R + O2 -> H2O + CO2}
+				
+				A specific example would be:
+				
+				\schemestart
+					\chemname{\ce{C2H6}}{Ethane}
+					\+
+					\chemname{\ce{7O2}}{Oxygen}
+					\arrow{->}
+					\chemname{\ce{6H2O}}{Water}
+					\+
+					\chemname{\ce{4CO2}}{Carbon Dioxide}
+				\schemestop
+			\subsubsection{Incomplete Combustion}
+				Incomplete combustion is when air/oxygen is not in excess.
+				
+				\ce{R + O2 -> H2O + CO}
+				
+				and
+				
+				\ce{R + O2 -> H2O + C}
+				
+				A more specific example would be the incomplete combustion of ethane:
+				
+				\ce{C2H6 + 5O2 -> 6H2O + 4CO}
+				
+				This reaction yields carbon monoxide, a very dangerous gas. The second reaction in the incomplete combustion of ethane is:
+				
+				\ce{C2H6 + 3O2 -> 6H2O + 4C}
+				
+				This reaction yields carbon, or soot.
+	
+		\subsection{Free Radical Substitution}
+			\schemestart
+					Alkane
+					\+
+					Halogen
+					\arrow{->[UV][Light]}
+					Halogenoalkane
+					\+
+					Hydrochloric Acid
+				\schemestop
+				\subsubsection{Mechanism of Reaction}
+					\textbf{Initiation}
+						The halogen is broken apart by homolytic fission, yielding two free radicals.
+						\schemestart
+							\setchemfig{bond offset=5pt}
+							\chemfig{Cl-[:0]Cl}
+							\arrow{->[UV][Light]}
+							\ce{Cl. + Cl.}
+						\schemestop
+					
+					\textbf{Propogation}
+						The halogen free radicals react with the other compounds present in the reaction mixture in some of the following ways:
+						
+						\ce{CH4 + Cl. -> CH3. + HCl} \\
+						\ce{CH3. + Cl2 -> CH3Cl + Cl.} \\
+						\ce{Cl. + CH3Cl -> CHCl2. + HCl} \\
+						\ce{CH2Cl. + Cl2 -> CH2Cl2 + Cl.} \\
+						\ce{Cl. + CH2Cl2 -> CHCl2. + HCl} \\
+						\ce{CHCl2. + Cl2 -> CHCl3 + Cl.} \\
+						\ce{Cl. + CHCl3 -> CCl3. + HCl} \\
+						\ce{CCl3. + Cl2 -> CCl4 + Cl.}\footnote{\ce{CCl4} is very very bad for you}
+						
+					\textbf{Termination}
+						Radicals combine to create stable compounds, ending the chain reaction.
+						
+						\ce{Cl. + CH3. -> CH3Cl} \\
+						\ce{Cl. + Cl. -> Cl2} \\
+						\ce{CH3. +  CH3. -> C2H6}
+						
+						The reaction also has the byproducts of all the propogation steps.
+						
+\end{document}
+
