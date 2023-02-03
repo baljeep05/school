@@ -1,0 +1,52 @@
+%No rights reserved under CC0 license.
+%See file LICENSE in git root for further details.
+
+\documentclass[11pt,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+
+\begin{document}
+	\setchemfig{atom sep=15pt}
+	\section{Electric Potential}
+		
+		Electric potential is defined as \[ V = \frac{\Delta E_p}{Q} \] where $V$ is measured in volts.
+			
+		\subsection{"Potential Walks"}
+		
+			The potential walk is a method for finding the electric potential in a given spot on a circuit.
+			
+			\subsubsection*{Passing a Battery from Positive to Negative}
+				When passing a voltage source from positive to negative, subtract $u$ from $v$
+				
+			\subsubsection*{Passing a Battery from Negative to Positive}
+				When passing a battery voltage source from negative to positive, add $u$ to $v$
+				
+			\subsubsection*{Passing a Resistor from Positive to Negative}
+				When passing a resistor (or other component) in the direction of the current, we subtract $I \times R$ from $v$
+				
+			\subsubsection*{Passing a Resistor from Negative to Positive}
+				When passing a resistor (or other component) against the direction of the current, we add $I \times R$ to $v$
+				
+		\subsection{Grounding}
+			A \emph{ground point} is a point where the circuit connects to the ground\footnote{Ground is usually defined as the earth}. At a ground point $E_p = 0$. 
+			
+			\begin{circuitikz}
+				\draw (0,0)
+				to[battery1={U=1.5v}] (0,2) % The voltage source
+				to[short] (1,2)
+				to[resistor={$R = 5 \Omega$}] (1,0)
+				to[short] (0,0);
+				\draw (0,0) to (0,0) node[ground]{}; 
+			\end{circuitikz}
+\end{document}
